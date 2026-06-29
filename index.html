@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>PhysioRetreat by Dr. Manasi Darekar — Back, Neck &amp; Shoulder Physiotherapy · Home Visits &amp; Online · Thane, Mulund, Dombivali, Kalyan</title>
+<meta name="description" content="PhysioRetreat by Dr. Manasi Darekar — physiotherapy specialising in back, neck &amp; shoulder. Free first tele-consultation. Home visits & online care across Thane, Mulund, Dombivali and Kalyan. Tap where it hurts and get a recovery plan." />
+
+<!-- ====== CONFIG: set real WhatsApp number, email & prices in the <script> at the bottom (CONFIG object) ====== -->
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<link rel="icon" type="image/svg+xml" href="favicon.svg" />
+<link rel="apple-touch-icon" href="favicon.svg" />
+
+<style>
+:root{
+  --indigo:#6d5efc;
+  --violet:#8b5cf6;
+  --indigo-deep:#4536c9;
+  --teal:#10b6a0;
+  --coral:#ff7a59;
+  --ink:#191b2e;
+  --muted:#6b6f88;
+  --line:rgba(25,27,46,.09);
+  --bg:#f4f4fb;
+  --glass:rgba(255,255,255,.62);
+  --glass-strong:rgba(255,255,255,.82);
+  --radius:26px;
+  --radius-sm:18px;
+  --shadow:0 24px 60px -28px rgba(58,40,150,.45);
+  --shadow-sm:0 12px 34px -20px rgba(58,40,150,.4);
+  --grad:linear-gradient(120deg,var(--indigo),var(--violet));
+  --grad-coral:linear-gradient(120deg,#ff9a6b,var(--coral));
+  --display:"Sora",system-ui,sans-serif;
+  --sans:"Plus Jakarta Sans",system-ui,sans-serif;
+  --maxw:1200px;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:var(--sans);color:var(--ink);line-height:1.6;overflow-x:hidden;
+  background:var(--bg);position:relative;
+}
+/* mesh gradient backdrop */
+body::before{
+  content:"";position:fixed;inset:0;z-index:-2;
+  background:
+    radial-gradient(50% 45% at 12% 8%,rgba(139,124,255,.35),transparent 60%),
+    radial-gradient(45% 40% at 88% 6%,rgba(255,154,107,.28),transparent 60%),
+    radial-gradient(55% 50% at 85% 88%,rgba(16,182,160,.22),transparent 60%),
+    radial-gradient(50% 45% at 8% 92%,rgba(109,94,252,.22),transparent 60%);
+}
+h1,h2,h3,h4{font-family:var(--display);font-weight:700;line-height:1.08;letter-spacing:-.02em}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:.74rem;font-weight:800;letter-spacing:.16em;text-transform:uppercase;color:var(--indigo-deep)}
+.eyebrow::before{content:"";width:22px;height:2px;border-radius:2px;background:var(--coral)}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;font-family:var(--sans);font-weight:700;font-size:.96rem;padding:14px 26px;border-radius:100px;border:none;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .25s,color .25s;white-space:nowrap}
+.btn:active{transform:translateY(1px)}
+.btn-primary{background:var(--grad);color:#fff;box-shadow:0 14px 30px -12px rgba(109,94,252,.7)}
+.btn-primary:hover{transform:translateY(-3px);box-shadow:0 20px 38px -14px rgba(109,94,252,.85)}
+.btn-coral{background:var(--grad-coral);color:#fff;box-shadow:0 14px 30px -12px rgba(255,122,89,.7)}
+.btn-coral:hover{transform:translateY(-3px);box-shadow:0 20px 38px -14px rgba(255,122,89,.85)}
+.btn-ghost{background:rgba(255,255,255,.6);color:var(--ink);border:1.5px solid var(--line);backdrop-filter:blur(8px)}
+.btn-ghost:hover{transform:translateY(-3px);border-color:var(--indigo);color:var(--indigo-deep)}
+.btn-wa{background:#25D366;color:#073b1c;box-shadow:0 14px 30px -12px rgba(37,211,102,.7)}
+.btn-wa:hover{transform:translateY(-3px)}
+
+/* announcement bar */
+.topbar{background:var(--ink);color:#fff;font-size:.85rem;font-weight:600;text-align:center;padding:9px 40px 9px 16px;position:relative;z-index:70}
+.topbar a{color:#ffd9cb;text-decoration:underline;text-underline-offset:2px}
+.topbar .close{position:absolute;right:12px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,.14);border:none;color:#fff;width:24px;height:24px;border-radius:50%;cursor:pointer;font-size:.9rem;line-height:1}
+
+/* nav */
+header.nav{position:sticky;top:12px;z-index:60}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;max-width:var(--maxw);margin:12px auto 0;padding:10px 12px 10px 20px;background:var(--glass);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.6);border-radius:100px;box-shadow:var(--shadow-sm)}
+.brand{display:flex;align-items:center;gap:11px;font-family:var(--display);font-weight:700;font-size:1.1rem}
+.brand .logo{width:40px;height:40px;border-radius:13px;flex:0 0 40px;background:var(--grad);display:grid;place-items:center;color:#fff;box-shadow:0 8px 18px -8px rgba(109,94,252,.8)}
+.brand small{display:block;font-family:var(--sans);font-size:.6rem;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-weight:700;margin-top:-1px}
+.nav-links{display:flex;align-items:center;gap:26px}
+.nav-links a{font-weight:600;font-size:.93rem;opacity:.82;position:relative;transition:.2s}
+.nav-links a::after{content:"";position:absolute;left:0;bottom:-6px;width:0;height:2px;border-radius:2px;background:var(--grad);transition:.25s}
+.nav-links a:hover{opacity:1}.nav-links a:hover::after{width:100%}
+.nav-cta{display:flex;align-items:center;gap:10px}
+.hamburger{display:none;background:none;border:none;cursor:pointer;width:42px;height:42px;border-radius:12px;align-items:center;justify-content:center}
+.hamburger span,.hamburger span::before,.hamburger span::after{display:block;width:22px;height:2px;background:var(--ink);border-radius:2px;transition:.3s;position:relative}
+.hamburger span::before,.hamburger span::after{content:"";position:absolute;left:0}
+.hamburger span::before{top:-7px}.hamburger span::after{top:7px}
+.hamburger.open span{background:transparent}
+.hamburger.open span::before{top:0;transform:rotate(45deg)}
+.hamburger.open span::after{top:0;transform:rotate(-45deg)}
+
+/* glass card base */
+.glass{background:var(--glass);backdrop-filter:blur(18px);border:1px solid rgba(255,255,255,.6);border-radius:var(--radius);box-shadow:var(--shadow)}
+
+/* hero */
+.hero{padding:46px 0 40px;position:relative}
+.hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:38px;align-items:center}
+.assistant-chip{display:inline-flex;align-items:center;gap:10px;background:var(--glass-strong);border:1px solid rgba(255,255,255,.7);padding:8px 16px 8px 9px;border-radius:100px;box-shadow:var(--shadow-sm);font-weight:600;font-size:.9rem;margin-bottom:20px}
+.assistant-chip .av{width:30px;height:30px;border-radius:50%;background:var(--grad);display:grid;place-items:center;color:#fff;flex:0 0 30px}
+.assistant-chip .dot{width:8px;height:8px;border-radius:50%;background:var(--teal);box-shadow:0 0 0 0 rgba(16,182,160,.5);animation:livedot 1.8s infinite}
+@keyframes livedot{0%{box-shadow:0 0 0 0 rgba(16,182,160,.5)}70%{box-shadow:0 0 0 8px rgba(16,182,160,0)}100%{box-shadow:0 0 0 0 rgba(16,182,160,0)}}
+.hero h1{font-size:clamp(2.5rem,5.4vw,4.1rem);margin:6px 0 16px}
+.hero p.lead{font-size:1.12rem;color:var(--muted);max-width:500px;margin-bottom:22px}
+.spec-badges{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.spec-badges .b{display:inline-flex;align-items:center;gap:7px;background:var(--glass-strong);border:1px solid rgba(255,255,255,.7);padding:8px 15px;border-radius:100px;font-weight:700;font-size:.84rem;box-shadow:var(--shadow-sm)}
+.spec-badges .b b{color:var(--indigo-deep)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:26px}
+.free-tag{display:inline-flex;align-items:center;gap:8px;font-weight:800;color:var(--teal);font-size:.92rem}
+.free-tag .pill{background:rgba(16,182,160,.14);color:#0c8b7a;padding:3px 10px;border-radius:100px;font-size:.74rem;letter-spacing:.04em}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap;margin-top:6px}
+.hero-stats .s b{font-family:var(--display);font-size:1.9rem;display:block;line-height:1;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-stats .s span{font-size:.8rem;color:var(--muted);font-weight:600}
+
+/* BODY MAP */
+.bodymap-panel{padding:22px 22px 18px;position:relative;overflow:hidden}
+.bodymap-panel .bm-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.bodymap-panel .bm-head h3{font-size:1.05rem}
+.bm-head .live{font-size:.72rem;font-weight:700;color:var(--teal);display:flex;align-items:center;gap:6px}
+.bm-head .live::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--teal);animation:livedot 1.8s infinite}
+.bm-sub{font-size:.85rem;color:var(--muted);margin-bottom:8px}
+.bm-stage{display:grid;grid-template-columns:1fr 1.05fr;gap:10px;align-items:center}
+.bm-figure{display:grid;place-items:center;position:relative}
+.bm-figure svg{width:100%;max-width:230px;height:auto;overflow:visible}
+.zone{fill:#cfd2f5;stroke:#fff;stroke-width:2.5;cursor:pointer;transition:fill .25s,transform .25s,filter .25s;transform-box:fill-box;transform-origin:center}
+.zone:hover{fill:#9a8bff}
+.zone.spec{fill:#b9bdfd}
+.zone.active{fill:url(#zoneGrad);filter:drop-shadow(0 4px 12px rgba(109,94,252,.55))}
+.zone.spec:not(.active){animation:specpulse 2.4s ease-in-out infinite}
+@keyframes specpulse{0%,100%{fill:#b9bdfd}50%{fill:#9f9bfb}}
+.bm-readout{align-self:stretch;display:flex;flex-direction:column}
+.bm-card{background:var(--glass-strong);border:1px solid rgba(255,255,255,.7);border-radius:var(--radius-sm);padding:16px;flex:1;display:flex;flex-direction:column;min-height:0}
+.bm-card .tag{font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--coral);margin-bottom:6px}
+.bm-card h4{font-size:1.18rem;margin-bottom:6px;transition:.2s}
+.bm-card p{font-size:.85rem;color:var(--muted);margin-bottom:auto}
+.bm-plan{margin-top:12px;padding-top:12px;border-top:1px dashed var(--line)}
+.bm-plan .plabel{font-size:.7rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.bm-plan .pname{font-family:var(--display);font-weight:700;font-size:.98rem;margin:2px 0 10px;color:var(--indigo-deep)}
+.bm-card .btn{width:100%;font-size:.86rem;padding:11px 16px}
+.bm-hint{font-size:.74rem;color:var(--muted);text-align:center;margin-top:10px}
+.bm-tabs{display:flex;gap:6px;margin-bottom:10px}
+.bm-tabs button{flex:1;border:1px solid var(--line);background:rgba(255,255,255,.5);border-radius:100px;padding:7px;font-family:var(--sans);font-weight:700;font-size:.78rem;cursor:pointer;color:var(--muted);transition:.2s}
+.bm-tabs button.on{background:var(--grad);color:#fff;border-color:transparent}
+
+/* sections */
+.section{padding:80px 0}
+.sec-head{max-width:660px;margin-bottom:44px}
+.sec-head.center{margin:0 auto 44px;text-align:center}
+.sec-head h2{font-size:clamp(1.9rem,3.8vw,2.9rem);margin:14px 0 12px}
+.sec-head p{color:var(--muted);font-size:1.06rem}
+
+/* specialised trio */
+.trio{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.trio .t{padding:30px 26px;transition:transform .3s,box-shadow .3s;cursor:default}
+.trio .t:hover{transform:translateY(-7px)}
+.trio .t .ic{width:58px;height:58px;border-radius:17px;display:grid;place-items:center;margin-bottom:16px;background:var(--grad);color:#fff;box-shadow:0 12px 24px -10px rgba(109,94,252,.7)}
+.trio .t:nth-child(2) .ic{background:var(--grad-coral);box-shadow:0 12px 24px -10px rgba(255,122,89,.7)}
+.trio .t:nth-child(3) .ic{background:linear-gradient(120deg,#13c7af,#0c8b7a);box-shadow:0 12px 24px -10px rgba(16,182,160,.7)}
+.trio .t h3{font-size:1.35rem;margin-bottom:8px}
+.trio .t p{color:var(--muted);font-size:.94rem;margin-bottom:14px}
+.trio .t ul{list-style:none;display:flex;flex-direction:column;gap:7px}
+.trio .t li{display:flex;gap:9px;font-size:.9rem;font-weight:600;align-items:flex-start}
+.trio .t li::before{content:"✓";color:var(--teal);font-weight:800;flex:0 0 auto}
+
+/* services */
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.svc{padding:32px 30px;position:relative;overflow:hidden;transition:transform .3s}
+.svc:hover{transform:translateY(-6px)}
+.svc .ic{width:54px;height:54px;border-radius:16px;display:grid;place-items:center;margin-bottom:16px;background:rgba(109,94,252,.12);color:var(--indigo-deep)}
+.svc h3{font-size:1.4rem;margin-bottom:8px}
+.svc p{color:var(--muted)}
+.svc .tag{position:absolute;top:22px;right:22px;font-size:.68rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;background:var(--grad-coral);color:#fff;padding:6px 12px;border-radius:100px}
+.svc.feat{grid-column:span 2;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;background:linear-gradient(125deg,rgba(109,94,252,.96),rgba(139,92,246,.96));color:#fff;border-color:transparent}
+.svc.feat .ic{background:rgba(255,255,255,.18);color:#fff}
+.svc.feat p{color:rgba(255,255,255,.85)}
+.svc.feat .free-line{display:flex;align-items:center;gap:10px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.25);padding:12px 16px;border-radius:14px;margin-top:14px;font-weight:700}
+.svc.feat .free-line b{font-size:1.5rem;font-family:var(--display)}
+
+/* PACKAGES */
+.packages{position:relative}
+.toggle-wrap{display:flex;justify-content:center;margin-bottom:34px}
+.toggle{display:inline-flex;background:var(--glass-strong);border:1px solid rgba(255,255,255,.7);border-radius:100px;padding:5px;box-shadow:var(--shadow-sm);position:relative}
+.toggle button{position:relative;z-index:2;border:none;background:none;font-family:var(--sans);font-weight:700;font-size:.92rem;padding:10px 22px;border-radius:100px;cursor:pointer;color:var(--muted);transition:color .3s;display:flex;align-items:center;gap:7px}
+.toggle button.on{color:#fff}
+.toggle .slider{position:absolute;z-index:1;top:5px;bottom:5px;left:5px;width:calc(50% - 5px);background:var(--grad);border-radius:100px;transition:transform .3s cubic-bezier(.2,.8,.2,1)}
+.toggle.home .slider{transform:translateX(100%)}
+.pkg-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;align-items:stretch}
+.pkg{padding:28px 24px;display:flex;flex-direction:column;position:relative;transition:transform .3s,box-shadow .3s}
+.pkg:hover{transform:translateY(-7px)}
+.pkg.pop{background:linear-gradient(160deg,rgba(109,94,252,.97),rgba(139,92,246,.97));color:#fff;border-color:transparent;box-shadow:0 30px 60px -24px rgba(109,94,252,.8)}
+.pkg.pop .pkg-name,.pkg.pop .price{color:#fff}
+.pkg.pop .feat-li{color:rgba(255,255,255,.92)}
+.pkg.pop .feat-li::before{color:#fff}
+.pkg.pop .save{background:rgba(255,255,255,.2);color:#fff}
+.pkg .ribbon{position:absolute;top:16px;right:16px;font-size:.64rem;font-weight:800;letter-spacing:.06em;text-transform:uppercase;background:var(--grad-coral);color:#fff;padding:5px 11px;border-radius:100px}
+.pkg.pop .ribbon{background:#fff;color:var(--indigo-deep)}
+.pkg-name{font-family:var(--display);font-weight:700;font-size:1.12rem;margin-bottom:4px}
+.pkg .desc{font-size:.82rem;color:var(--muted);margin-bottom:16px;min-height:34px}
+.pkg.pop .desc{color:rgba(255,255,255,.8)}
+.price-row{display:flex;align-items:baseline;gap:6px;margin-bottom:4px}
+.price{font-family:var(--display);font-weight:800;font-size:2.1rem;letter-spacing:-.03em}
+.price .cur{font-size:1.1rem;font-weight:700;vertical-align:top}
+.per{font-size:.82rem;color:var(--muted)}
+.pkg.pop .per{color:rgba(255,255,255,.78)}
+.save{display:inline-block;font-size:.72rem;font-weight:800;background:rgba(16,182,160,.16);color:#0c8b7a;padding:4px 10px;border-radius:100px;margin:8px 0 16px}
+.feat-list{list-style:none;display:flex;flex-direction:column;gap:9px;margin-bottom:20px;flex:1}
+.feat-li{display:flex;gap:9px;font-size:.86rem;font-weight:600;align-items:flex-start}
+.feat-li::before{content:"✓";color:var(--teal);font-weight:800;flex:0 0 auto}
+.pkg .btn{width:100%}
+.pkg.free{background:linear-gradient(160deg,rgba(16,182,160,.12),rgba(255,255,255,.7));border:1.5px solid rgba(16,182,160,.35)}
+.offer-strip{margin-top:26px;display:flex;align-items:center;gap:16px;flex-wrap:wrap;justify-content:center;text-align:center;padding:18px 26px;border-radius:var(--radius);background:linear-gradient(120deg,rgba(255,122,89,.14),rgba(109,94,252,.12));border:1px dashed rgba(255,122,89,.4);font-weight:700}
+.offer-strip .badge{background:var(--grad-coral);color:#fff;padding:7px 14px;border-radius:100px;font-size:.8rem;letter-spacing:.03em}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.step{padding:28px 22px;position:relative;transition:.3s}
+.step:hover{transform:translateY(-6px)}
+.step .num{font-family:var(--display);font-weight:800;font-size:2.2rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;line-height:1;margin-bottom:10px}
+.step h4{font-size:1.12rem;margin-bottom:7px}
+.step p{font-size:.9rem;color:var(--muted)}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:48px;align-items:center}
+.about-photo{aspect-ratio:1/1.12;border-radius:var(--radius);background:linear-gradient(150deg,rgba(139,124,255,.35),rgba(16,182,160,.25));position:relative;overflow:hidden;display:grid;place-items:center;box-shadow:var(--shadow)}
+.about-photo .ring{position:absolute;width:118%;height:118%;border:1.5px dashed rgba(109,94,252,.4);border-radius:50%;animation:spin 36s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.creds{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:24px}
+.cred{padding:16px 18px}
+.cred b{font-family:var(--display);font-size:1rem;display:block;color:var(--indigo-deep)}
+.cred span{font-size:.82rem;color:var(--muted)}
+.sign{font-family:var(--display);font-style:italic;font-weight:600;font-size:1.3rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;margin-top:24px}
+
+/* testimonials */
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.tst{padding:28px 26px;display:flex;flex-direction:column;gap:13px}
+.stars{color:var(--coral);letter-spacing:2px}
+.tst p{font-size:.97rem}
+.tst .who{display:flex;align-items:center;gap:11px;margin-top:auto}
+.tst .av{width:42px;height:42px;border-radius:50%;background:var(--grad);color:#fff;display:grid;place-items:center;font-weight:700;font-family:var(--display)}
+.tst .who b{display:block;font-size:.92rem}
+.tst .who span{font-size:.8rem;color:var(--muted)}
+
+/* booking */
+.book-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:42px;align-items:start}
+.book-aside h2{font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 14px}
+.book-aside p{color:var(--muted);margin-bottom:22px}
+.next-steps{list-style:none;display:flex;flex-direction:column;gap:12px;margin-bottom:26px}
+.next-steps li{display:flex;gap:13px;align-items:center;font-weight:600;font-size:.95rem}
+.next-steps .n{width:30px;height:30px;border-radius:10px;background:var(--grad);color:#fff;display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:.85rem;flex:0 0 30px}
+.contact-line{display:flex;align-items:center;gap:13px;padding:13px 0;border-top:1px solid var(--line)}
+.contact-line .ic{width:44px;height:44px;border-radius:13px;background:var(--glass-strong);border:1px solid rgba(255,255,255,.7);display:grid;place-items:center;color:var(--indigo-deep);flex:0 0 44px}
+.contact-line b{display:block;font-size:.97rem}
+.contact-line span{font-size:.84rem;color:var(--muted)}
+.form-card{padding:30px}
+.form-card h3{font-size:1.4rem;margin-bottom:3px}
+.form-card .sub{color:var(--muted);font-size:.92rem;margin-bottom:14px}
+.sel-chips{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:16px;min-height:4px}
+.sel-chip{display:inline-flex;align-items:center;gap:7px;background:rgba(109,94,252,.1);color:var(--indigo-deep);border:1px solid rgba(109,94,252,.25);padding:6px 12px;border-radius:100px;font-size:.8rem;font-weight:700}
+.sel-chip button{background:none;border:none;cursor:pointer;color:var(--indigo-deep);font-size:.95rem;line-height:1;opacity:.7}
+.sel-chip button:hover{opacity:1}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.8rem;font-weight:700;margin-bottom:6px;color:var(--indigo-deep)}
+.field input,.field select,.field textarea{width:100%;font-family:var(--sans);font-size:.96rem;color:var(--ink);padding:12px 15px;border:1.5px solid var(--line);border-radius:13px;background:rgba(255,255,255,.7);transition:.2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--indigo);background:#fff;box-shadow:0 0 0 4px rgba(109,94,252,.13)}
+.field textarea{resize:vertical;min-height:76px}
+.row-2{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.book-actions{display:grid;grid-template-columns:1fr 1fr;gap:11px;margin-top:6px}
+.form-note{font-size:.78rem;color:var(--muted);text-align:center;margin-top:12px}
+.form-note b{color:var(--indigo-deep)}
+
+/* footer */
+footer{margin-top:40px;padding:54px 0 26px;background:var(--ink);color:#fff;position:relative}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:34px;margin-bottom:36px}
+.foot-grid p{color:rgba(255,255,255,.66);font-size:.93rem;margin-top:13px;max-width:300px}
+.foot-col h4{font-family:var(--sans);font-size:.76rem;letter-spacing:.12em;text-transform:uppercase;color:#ffb59c;margin-bottom:14px}
+.foot-col a{display:block;color:rgba(255,255,255,.8);padding:5px 0;font-size:.92rem;transition:.2s}
+.foot-col a:hover{color:#fff;padding-left:5px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.13);padding-top:20px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.83rem;color:rgba(255,255,255,.55)}
+
+/* toast */
+.toast{position:fixed;left:50%;bottom:26px;transform:translate(-50%,20px);background:var(--ink);color:#fff;padding:13px 22px;border-radius:100px;font-weight:600;font-size:.9rem;box-shadow:var(--shadow);z-index:80;opacity:0;pointer-events:none;transition:.3s;display:flex;gap:9px;align-items:center;max-width:90vw}
+.toast.show{opacity:1;transform:translate(-50%,0)}
+
+/* floating wa */
+.wa-fab{position:fixed;right:20px;bottom:20px;z-index:55;width:58px;height:58px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 14px 30px -8px rgba(37,211,102,.7);animation:pulse 2.6s infinite}
+.wa-fab:hover{transform:scale(1.08)}
+@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(37,211,102,.5)}70%{box-shadow:0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 0 0 0 rgba(37,211,102,0)}}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s cubic-bezier(.2,.8,.2,1),transform .7s cubic-bezier(.2,.8,.2,1)}
+.reveal.in{opacity:1;transform:none}
+
+@media(max-width:1000px){
+  .hero-grid,.about-grid,.book-grid{grid-template-columns:1fr;gap:34px}
+  .pkg-grid{grid-template-columns:1fr 1fr}
+  .trio,.steps,.tst-grid{grid-template-columns:1fr}
+  .bodymap-panel{max-width:520px;margin:0 auto;width:100%}
+}
+@media(max-width:760px){
+  .nav-links,.nav-cta .btn-ghost{display:none}
+  .hamburger{display:flex}
+  .section{padding:58px 0}
+  .svc.feat{grid-column:span 2;grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .svc-grid,.pkg-grid,.creds,.foot-grid,.row-2,.book-actions{grid-template-columns:1fr}
+  .svc.feat{grid-column:span 1}
+  .bm-stage{grid-template-columns:1fr}
+  .bm-figure svg{max-width:180px}
+  .hero-stats{gap:20px}
+  .wrap{padding:0 16px}
+}
+.mobile-menu{position:fixed;inset:0;z-index:65;background:rgba(244,244,251,.96);backdrop-filter:blur(10px);display:none;flex-direction:column;align-items:center;justify-content:center;gap:6px;opacity:0;pointer-events:none;transition:.3s}
+.mobile-menu.open{display:flex;opacity:1;pointer-events:auto}
+.mobile-menu a{font-family:var(--display);font-size:1.7rem;font-weight:700;padding:8px}
+.mobile-menu .btn{margin-top:16px}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="topbar" id="topbar">
+  🎉 <b>Free first tele-consultation</b> for back, neck &amp; shoulder — limited slots this month. <a href="#book">Claim yours →</a>
+  <button class="close" id="topClose" aria-label="Dismiss">✕</button>
+</div>
+
+<!-- NAV -->
+<header class="nav">
+  <nav class="nav-inner wrap">
+    <a href="#home" class="brand">
+      <span class="logo"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 2.6C7.7 6 5.6 9.8 5.6 13.4c0 4.1 2.8 7.2 6.4 8.8 3.6-1.6 6.4-4.7 6.4-8.8 0-3.6-2.1-7.4-6.4-10.8z" fill="#fff"/><path d="M12 7.2v11.4" stroke="#6d5efc" stroke-width="1.3" stroke-linecap="round"/><path d="M12 11l2.6-1.7M12 14.2l2.6-1.7M12 11 9.4 9.3M12 14.2l-2.6-1.7" stroke="#6d5efc" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+      <span>Physio<span class="grad-text">Retreat</span><small>by Dr. Manasi Darekar</small></span>
+    </a>
+    <div class="nav-links">
+      <a href="#specialised">Specialised in</a>
+      <a href="#services">Services</a>
+      <a href="#packages">Packages</a>
+      <a href="#process">How it works</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="nav-cta">
+      <a href="#book" class="btn btn-primary">Book — Free consult</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span></button>
+    </div>
+  </nav>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#specialised">Specialised in</a>
+  <a href="#services">Services</a>
+  <a href="#packages">Packages</a>
+  <a href="#process">How it works</a>
+  <a href="#about">About</a>
+  <a href="#book" class="btn btn-coral">Book — Free consult</a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="wrap hero-grid">
+    <div class="hero-copy reveal">
+      <div class="assistant-chip">
+        <span class="av"><svg width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M12 2.6C7.7 6 5.6 9.8 5.6 13.4c0 4.1 2.8 7.2 6.4 8.8 3.6-1.6 6.4-4.7 6.4-8.8 0-3.6-2.1-7.4-6.4-10.8z" fill="#fff"/><path d="M12 7v11" stroke="#7c6bff" stroke-width="1.2" stroke-linecap="round"/></svg></span>
+        <span class="dot"></span>
+        <span id="typeline">Welcome to PhysioRetreat ✨</span>
+      </div>
+      <h1>Tap where it hurts. <span class="grad-text">Get your recovery plan.</span></h1>
+      <p class="lead">Physiotherapy that comes to you — specialised in <b>back, neck &amp; shoulder</b>. Home visits &amp; online consults across Thane, Mulund, Dombivali &amp; Kalyan.</p>
+      <div class="spec-badges">
+        <span class="b">🦴 <b>Back</b></span>
+        <span class="b">🧣 <b>Neck</b></span>
+        <span class="b">💪 <b>Shoulder</b></span>
+        <span class="b">🏠 Home &amp; 💻 Online</span>
+      </div>
+      <div class="hero-cta">
+        <a href="#book" class="btn btn-coral">Claim free tele-consult →</a>
+        <a href="#packages" class="btn btn-ghost">View packages</a>
+      </div>
+      <div class="free-tag" style="margin-bottom:22px"><span class="pill">FREE</span> First 20-min tele-consultation · no payment to book</div>
+      <div class="hero-stats">
+        <div class="s"><b data-count="5">0</b><span>Years experience</span></div>
+        <div class="s"><b data-count="1500" data-suffix="+">0</b><span>Patients treated</span></div>
+        <div class="s"><b data-count="4.9" data-dec="1" data-suffix="★">0</b><span>Patient rating</span></div>
+      </div>
+    </div>
+
+    <!-- INTERACTIVE BODY MAP -->
+    <div class="bodymap-panel glass reveal">
+      <div class="bm-head">
+        <h3>Where does it hurt?</h3>
+        <span class="live">Live</span>
+      </div>
+      <p class="bm-sub">Tap a highlighted area — I'll show you what it could be and the right plan.</p>
+      <div class="bm-stage">
+        <div class="bm-figure">
+          <svg viewBox="0 0 280 560" role="img" aria-label="Interactive body map">
+            <defs>
+              <linearGradient id="zoneGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0" stop-color="#7c6bff"/><stop offset="1" stop-color="#a565f6"/>
+              </linearGradient>
+            </defs>
+            <!-- legs -->
+            <rect class="zone" data-zone="leg-l" x="104" y="300" width="32" height="118" rx="16"/>
+            <rect class="zone" data-zone="leg-r" x="144" y="300" width="32" height="118" rx="16"/>
+            <rect class="zone spec" data-zone="knee-l" x="102" y="406" width="36" height="34" rx="14"/>
+            <rect class="zone spec" data-zone="knee-r" x="142" y="406" width="36" height="34" rx="14"/>
+            <rect class="zone" data-zone="shin-l" x="106" y="432" width="28" height="104" rx="14"/>
+            <rect class="zone" data-zone="shin-r" x="146" y="432" width="28" height="104" rx="14"/>
+            <!-- hips -->
+            <rect class="zone" data-zone="hip" x="100" y="258" width="80" height="56" rx="24"/>
+            <!-- torso -->
+            <rect class="zone spec" data-zone="lower-back" x="104" y="190" width="72" height="82" rx="26"/>
+            <rect class="zone spec" data-zone="upper-back" x="98" y="108" width="84" height="92" rx="30"/>
+            <!-- arms -->
+            <rect class="zone" data-zone="arm-l" x="56" y="120" width="26" height="156" rx="13"/>
+            <rect class="zone" data-zone="arm-r" x="198" y="120" width="26" height="156" rx="13"/>
+            <!-- shoulders -->
+            <circle class="zone spec" data-zone="shoulder-l" cx="92" cy="124" r="22"/>
+            <circle class="zone spec" data-zone="shoulder-r" cx="188" cy="124" r="22"/>
+            <!-- neck -->
+            <rect class="zone spec" data-zone="neck" x="124" y="80" width="32" height="26" rx="11"/>
+            <!-- head -->
+            <circle class="zone" data-zone="head" cx="140" cy="48" r="34"/>
+          </svg>
+        </div>
+        <div class="bm-readout">
+          <div class="bm-card">
+            <span class="tag" id="bmTag">Tap to start</span>
+            <h4 id="bmTitle">Pick the painful area</h4>
+            <p id="bmDesc">The highlighted zones are my specialities — back, neck and shoulder. Tap any part of the body to see common causes and the matching recovery plan.</p>
+            <div class="bm-plan">
+              <span class="plabel">Recommended plan</span>
+              <div class="pname" id="bmPlan">Free tele-consult to start</div>
+              <button class="btn btn-primary" id="bmBook" type="button">Book this — it's free first time</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="bm-hint">🔒 Just a guide — your real assessment happens in your consult.</p>
+    </div>
+  </div>
+</section>
+
+<!-- SPECIALISED TRIO -->
+<section class="section" id="specialised">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">My speciality</span>
+      <h2>Back, Neck &amp; Shoulder — <span class="grad-text">done right</span></h2>
+      <p>Most pain I treat starts in these three areas. Here's how focused, one-on-one care gets you moving freely again.</p>
+    </div>
+    <div class="trio">
+      <div class="t glass reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M12 3v18M8 6c-2 1-3 3-3 6s1 5 3 6M16 6c2 1 3 3 3 6s-1 5-3 6" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Back &amp; Spine</h3>
+        <p>Slip disc, sciatica, lower-back stiffness and posture-related pain.</p>
+        <ul><li>Manual therapy &amp; mobilisation</li><li>Core &amp; spine strengthening</li><li>Ergonomic correction</li></ul>
+      </div>
+      <div class="t glass reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="7" r="3.4" stroke="currentColor" stroke-width="1.7"/><path d="M6 21c0-4 2.5-7 6-7s6 3 6 7" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Neck &amp; Cervical</h3>
+        <p>Tech-neck, cervical spondylosis, stiffness and posture headaches.</p>
+        <ul><li>Release &amp; traction techniques</li><li>Posture &amp; mobility drills</li><li>Headache relief routines</li></ul>
+      </div>
+      <div class="t glass reveal">
+        <div class="ic"><svg width="28" height="28" viewBox="0 0 24 24" fill="none"><path d="M6 9a6 6 0 0112 0v3a4 4 0 01-4 4h-1" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/><circle cx="7" cy="17" r="3" stroke="currentColor" stroke-width="1.7"/></svg></div>
+        <h3>Shoulder</h3>
+        <p>Frozen shoulder, rotator cuff, impingement and limited movement.</p>
+        <ul><li>Range-of-motion recovery</li><li>Strength &amp; stability work</li><li>Pain-free daily function</li></ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What I offer</span>
+      <h2>Care that fits your life</h2>
+      <p>One-on-one sessions, built around your goals — at your doorstep or over a video call.</p>
+    </div>
+    <div class="svc-grid">
+      <div class="svc feat glass reveal">
+        <div>
+          <span class="tag">Start free</span>
+          <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M17 9l4-2v10l-4-2" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg></div>
+          <h3>Free First Tele-Consult</h3>
+          <p>A 20-minute video call to understand your pain, give you instant advice, and map out the right plan — at no cost, no obligation.</p>
+        </div>
+        <div>
+          <div class="free-line"><b>₹0</b> First consultation · book in seconds</div>
+          <div style="margin-top:14px"><a href="#book" class="btn btn-coral">Claim it now →</a></div>
+        </div>
+      </div>
+      <div class="svc glass reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><path d="M3 11l9-8 9 8M5 10v10h14V10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <h3>Home Visit Physiotherapy</h3>
+        <p>Full hands-on treatment at your doorstep across Thane, Mulund, Dombivali &amp; Kalyan. All equipment brought to you.</p>
+      </div>
+      <div class="svc glass reveal">
+        <div class="ic"><svg width="26" height="26" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M8 21h8M12 19v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg></div>
+        <h3>Online Video Sessions</h3>
+        <p>Live assessment and a guided exercise programme over video — perfect for follow-ups and ongoing rehab, from anywhere.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PACKAGES -->
+<section class="section packages" id="packages">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Packages &amp; offers</span>
+      <h2>Simple, honest pricing</h2>
+      <p>Start free, then choose what suits you. Every session is a flat <b>₹700</b> — same price online or at your home.</p>
+    </div>
+    <div class="pkg-grid">
+      <div class="pkg free glass reveal">
+        <span class="ribbon">Start here</span>
+        <div class="pkg-name">Free Tele-Consult</div>
+        <p class="desc">20-min video assessment + advice</p>
+        <div class="price-row"><span class="price"><span class="cur">₹</span>0</span></div>
+        <span class="save">No payment to book</span>
+        <ul class="feat-list">
+          <li class="feat-li">Understand your pain</li>
+          <li class="feat-li">Instant expert advice</li>
+          <li class="feat-li">Personalised plan outline</li>
+        </ul>
+        <button class="btn btn-ghost" data-pkg="Free Tele-Consult" type="button">Book free</button>
+      </div>
+
+      <div class="pkg glass reveal">
+        <div class="pkg-name">Single Session</div>
+        <p class="desc">One focused treatment session</p>
+        <div class="price-row"><span class="price"><span class="cur">₹</span>700</span><span class="per">/ session</span></div>
+        <span class="save">Pay as you go</span>
+        <ul class="feat-list">
+          <li class="feat-li">Full assessment</li>
+          <li class="feat-li">Hands-on / guided therapy</li>
+          <li class="feat-li">Home-exercise plan</li>
+        </ul>
+        <button class="btn btn-ghost" data-pkg="Single Session" type="button">Choose</button>
+      </div>
+
+      <div class="pkg pop glass reveal">
+        <span class="ribbon">Most popular</span>
+        <div class="pkg-name">Recovery Pack</div>
+        <p class="desc">5 sessions · back / neck / shoulder</p>
+        <div class="price-row"><span class="price"><span class="cur">₹</span>2,975</span><span class="per">/ 5 sessions</span></div>
+        <span class="save">Save 15% · ₹595/session</span>
+        <ul class="feat-list">
+          <li class="feat-li">Everything in Single</li>
+          <li class="feat-li">Progress tracking</li>
+          <li class="feat-li">Priority scheduling</li>
+          <li class="feat-li">WhatsApp support between visits</li>
+        </ul>
+        <button class="btn btn-coral" data-pkg="Recovery Pack (5 sessions)" type="button">Choose</button>
+      </div>
+
+      <div class="pkg glass reveal">
+        <span class="ribbon">Best value</span>
+        <div class="pkg-name">Total Care</div>
+        <p class="desc">10 sessions · full rehab journey</p>
+        <div class="price-row"><span class="price"><span class="cur">₹</span>5,250</span><span class="per">/ 10 sessions</span></div>
+        <span class="save">Save 25% · ₹525/session</span>
+        <ul class="feat-list">
+          <li class="feat-li">Everything in Recovery Pack</li>
+          <li class="feat-li">Monthly progress review</li>
+          <li class="feat-li">Custom strength programme</li>
+        </ul>
+        <button class="btn btn-ghost" data-pkg="Total Care (10 sessions)" type="button">Choose</button>
+      </div>
+    </div>
+    <div class="offer-strip reveal">
+      <span class="badge">🎉 Launch Offer</span>
+      <span>Back, Neck &amp; Shoulder programs — <b>first tele-consult FREE</b> + <b>20% off</b> your first Recovery Pack.</span>
+    </div>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">What happens next</span>
+      <h2>From "ouch" to easy — in 4 steps</h2>
+      <p>No complicated forms or long waits. Here's exactly how it works.</p>
+    </div>
+    <div class="steps">
+      <div class="step glass reveal"><div class="num">01</div><h4>Book free</h4><p>Tap where it hurts or fill the quick form. Send via WhatsApp or email in seconds.</p></div>
+      <div class="step glass reveal"><div class="num">02</div><h4>Free tele-consult</h4><p>A 20-min video call to understand your pain and outline the right plan — at no cost.</p></div>
+      <div class="step glass reveal"><div class="num">03</div><h4>Your plan</h4><p>A personalised treatment &amp; exercise programme — at home or online, your choice.</p></div>
+      <div class="step glass reveal"><div class="num">04</div><h4>Recover</h4><p>Guided sessions and steady progress until you're back to moving freely.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="wrap about-grid">
+    <div class="about-photo reveal" aria-hidden="true">
+      <span class="ring"></span>
+      <svg width="120" height="120" viewBox="0 0 24 24" fill="none" opacity=".5"><circle cx="12" cy="8" r="4" stroke="#4536c9" stroke-width="1.2"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6" stroke="#4536c9" stroke-width="1.2" stroke-linecap="round"/></svg>
+    </div>
+    <div class="about-copy reveal">
+      <span class="eyebrow">Meet your physiotherapist</span>
+      <h2 style="font-size:clamp(1.9rem,3.6vw,2.7rem);margin:14px 0 14px">A calmer path back to moving freely</h2>
+      <p style="color:var(--muted)">I'm Dr. Manasi Darekar — a physiotherapist focused on back, neck &amp; shoulder care. After years in clinics and rehab, I built a practice around what patients actually need: focused, unhurried, one-on-one care, wherever they are.</p>
+      <p style="color:var(--muted);margin-top:10px">From the first free consult to your last session, you work with me directly — no rotating staff, no rushed appointments. Just a clear plan and steady progress.</p>
+      <div class="creds">
+        <div class="cred glass"><b>BPTh &amp; MPTh</b><span>Qualified Physiotherapist</span></div>
+        <div class="cred glass"><b>5+ Years</b><span>Clinical &amp; rehab experience</span></div>
+        <div class="cred glass"><b>Back · Neck · Shoulder</b><span>Specialised focus</span></div>
+        <div class="cred glass"><b>Registered</b><span>Licensed practitioner</span></div>
+      </div>
+      <p class="sign">— Dr. Manasi Darekar</p>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" id="testimonials">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow">Patient stories</span>
+      <h2>Recovery, in their words</h2>
+    </div>
+    <div class="tst-grid">
+      <div class="tst glass reveal">
+        <div class="stars">★★★★★</div>
+        <p>"My lower-back pain from desk work was unbearable. The free tele-consult hooked me — and the home sessions actually fixed it. Pain-free in 5 weeks."</p>
+        <div class="who"><span class="av">SR</span><div><b>Sunita R.</b><span>Thane · Home visit</span></div></div>
+      </div>
+      <div class="tst glass reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Frozen shoulder had me stuck for months. Manasi's online sessions fit my schedule and I got my full movement back. Highly recommend her."</p>
+        <div class="who"><span class="av">AK</span><div><b>Amit K.</b><span>Dombivali · Online</span></div></div>
+      </div>
+      <div class="tst glass reveal">
+        <div class="stars">★★★★★</div>
+        <p>"Cervical neck pain and headaches for years. The tap-where-it-hurts tool got me to the right plan instantly. Such a thoughtful, caring physio."</p>
+        <div class="who"><span class="av">PM</span><div><b>Priya M.</b><span>Mulund · Home visit</span></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section" id="book">
+  <div class="wrap book-grid">
+    <div class="book-aside reveal">
+      <span class="eyebrow">Book your appointment</span>
+      <h2>Start with a free tele-consult</h2>
+      <p>Fill a few details and send straight to Dr. Manasi via WhatsApp or email. You'll get a personal reply to confirm — usually within a few hours.</p>
+      <ul class="next-steps">
+        <li><span class="n">1</span> You send the request (WhatsApp or email)</li>
+        <li><span class="n">2</span> Manasi replies to confirm your free slot</li>
+        <li><span class="n">3</span> You meet on a 20-min video call</li>
+      </ul>
+      <div class="contact-line">
+        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M20 15.5a2 2 0 01-2 2A16 16 0 014.5 4a2 2 0 012-2H9l1.5 4-2 1.5a12 12 0 005 5L14 11l4 1.5z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <div><b id="phoneDisplay">+91 99999 99999</b><span>Call or WhatsApp · Mon–Sat, 8am–8pm</span></div>
+      </div>
+      <div class="contact-line">
+        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></span>
+        <div><b id="emailDisplay">hello@manasidarekar.com</b><span>Email for queries &amp; bookings</span></div>
+      </div>
+      <div class="contact-line">
+        <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none"><path d="M12 21c4-4.5 7-8 7-11a7 7 0 10-14 0c0 3 3 6.5 7 11z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.4" stroke="currentColor" stroke-width="1.6"/></svg></span>
+        <div><b>Thane · Mulund · Dombivali · Kalyan</b><span>Home visits + online worldwide</span></div>
+      </div>
+    </div>
+
+    <div class="form-card glass reveal">
+      <h3>Request your appointment</h3>
+      <p class="sub">Under a minute. No payment needed — first tele-consult is free.</p>
+      <div class="sel-chips" id="selChips"></div>
+      <form id="bookingForm" novalidate>
+        <div class="row-2">
+          <div class="field"><label for="name">Full name *</label><input type="text" id="name" placeholder="e.g. Rohan Sharma" required /></div>
+          <div class="field"><label for="phone">Phone / WhatsApp *</label><input type="tel" id="phone" placeholder="e.g. 98765 43210" required /></div>
+        </div>
+        <div class="row-2">
+          <div class="field"><label for="mode">Consultation type *</label>
+            <select id="mode"><option>Free Tele-Consult</option><option>Online Video Session</option><option>Home Visit</option></select></div>
+          <div class="field"><label for="location">Location / City *</label>
+            <select id="location"><option>Thane</option><option>Mulund</option><option>Dombivali</option><option>Kalyan</option><option>Online (anywhere)</option><option>Other</option></select></div>
+        </div>
+        <div class="field"><label for="condition">Where does it hurt?</label>
+          <select id="condition">
+            <option value="">Select area (optional)</option>
+            <option>Back / Spine</option><option>Neck / Cervical</option><option>Shoulder</option>
+            <option>Knee</option><option>Hip / Pelvis</option><option>Arm / Elbow</option>
+            <option>Headache / Jaw</option><option>Other / Not sure</option>
+          </select></div>
+        <div class="row-2">
+          <div class="field"><label for="date">Preferred date</label><input type="date" id="date" /></div>
+          <div class="field"><label for="time">Preferred time</label>
+            <select id="time"><option value="">Any time</option><option>Morning (8am–12pm)</option><option>Afternoon (12pm–4pm)</option><option>Evening (4pm–8pm)</option></select></div>
+        </div>
+        <div class="field"><label for="message">Anything else? (optional)</label><textarea id="message" placeholder="Briefly describe your symptoms or any questions…"></textarea></div>
+        <div class="book-actions">
+          <button type="button" class="btn btn-wa" id="btnWhatsApp">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            Book via WhatsApp
+          </button>
+          <button type="button" class="btn btn-ghost" id="btnEmail">
+            <svg width="19" height="19" viewBox="0 0 24 24" fill="none"><rect x="3" y="5" width="18" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/><path d="M3 7l9 6 9-6" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/></svg>
+            Book via Email
+          </button>
+        </div>
+        <p class="form-note">We confirm your slot personally. <b>Your details are sent only to Dr. Manasi</b> — nothing is stored on this site.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="#home" class="brand" style="color:#fff">
+          <span class="logo"><svg width="23" height="23" viewBox="0 0 24 24" fill="none"><path d="M12 2.6C7.7 6 5.6 9.8 5.6 13.4c0 4.1 2.8 7.2 6.4 8.8 3.6-1.6 6.4-4.7 6.4-8.8 0-3.6-2.1-7.4-6.4-10.8z" fill="#fff"/><path d="M12 7.2v11.4" stroke="#6d5efc" stroke-width="1.3" stroke-linecap="round"/><path d="M12 11l2.6-1.7M12 14.2l2.6-1.7M12 11 9.4 9.3M12 14.2l-2.6-1.7" stroke="#6d5efc" stroke-width="1.1" stroke-linecap="round"/></svg></span>
+          <span>PhysioRetreat<small style="color:rgba(255,255,255,.55)">by Dr. Manasi Darekar</small></span>
+        </a>
+        <p>Specialised back, neck &amp; shoulder physiotherapy — at your home or over video. Helping you move, heal and live without pain.</p>
+      </div>
+      <div class="foot-col"><h4>Explore</h4>
+        <a href="#specialised">Specialised in</a><a href="#services">Services</a><a href="#packages">Packages</a><a href="#process">How it works</a><a href="#about">About</a></div>
+      <div class="foot-col"><h4>Service areas</h4>
+        <a href="#book">Thane</a><a href="#book">Mulund</a><a href="#book">Dombivali</a><a href="#book">Kalyan</a><a href="#book">Online — worldwide</a></div>
+      <div class="foot-col"><h4>Get started</h4>
+        <a href="#book">Free tele-consult</a><a href="#book">Book home visit</a><a href="#book">Book online session</a><a href="#packages">View packages</a></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© <span id="year"></span> PhysioRetreat by Dr. Manasi Darekar. All rights reserved.</span>
+      <span>Made with care for your recovery.</span>
+    </div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+
+<a class="wa-fab" id="waFab" href="#book" aria-label="WhatsApp">
+  <svg width="30" height="30" viewBox="0 0 24 24" fill="#fff"><path d="M.057 24l1.687-6.163a11.867 11.867 0 01-1.587-5.946C.16 5.335 5.495 0 12.05 0a11.817 11.817 0 018.413 3.488 11.824 11.824 0 013.48 8.414c-.003 6.557-5.338 11.892-11.893 11.892a11.9 11.9 0 01-5.688-1.448L.057 24zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884a9.86 9.86 0 001.51 5.26l-.999 3.648 3.978-.607zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+</a>
+
+<script>
+/* =====================================================================
+   CONFIG — replace with Dr. Manasi's real details & prices
+   ===================================================================== */
+const CONFIG = {
+  whatsapp: "918369655549",            // international format, digits only (91 = India)
+  email:    "hello@manasidarekar.com",
+  phonePretty: "+91 83696 55549",      // shown on the page
+  web3formsKey: ""                     // paste your free Web3Forms access key to STORE every enquiry (see README)
+};
+
+/* ---- body-map zone knowledge base ---- */
+const ZONES = {
+  "neck":        {label:"Neck & Cervical", spec:true,  desc:"Stiff neck, cervical spondylosis, tech-neck and posture-related headaches.", plan:"Back, Neck & Shoulder Recovery Program", area:"Neck / Cervical"},
+  "shoulder-l":  {label:"Shoulder",        spec:true,  desc:"Frozen shoulder, rotator cuff strain, impingement and limited movement.", plan:"Back, Neck & Shoulder Recovery Program", area:"Shoulder"},
+  "shoulder-r":  {label:"Shoulder",        spec:true,  desc:"Frozen shoulder, rotator cuff strain, impingement and limited movement.", plan:"Back, Neck & Shoulder Recovery Program", area:"Shoulder"},
+  "upper-back":  {label:"Upper Back",      spec:true,  desc:"Postural strain, between-shoulder tension and desk fatigue.", plan:"Back, Neck & Shoulder Recovery Program", area:"Back / Spine"},
+  "lower-back":  {label:"Lower Back",      spec:true,  desc:"Slip disc, sciatica, lumbar stiffness and chronic lower-back pain.", plan:"Back, Neck & Shoulder Recovery Program", area:"Back / Spine"},
+  "knee-l":      {label:"Knee",            spec:true,  desc:"Arthritis, ligament injury, post-surgery rehab and joint stiffness.", plan:"Joint & Knee Recovery Plan", area:"Knee"},
+  "knee-r":      {label:"Knee",            spec:true,  desc:"Arthritis, ligament injury, post-surgery rehab and joint stiffness.", plan:"Joint & Knee Recovery Plan", area:"Knee"},
+  "hip":         {label:"Hip & Pelvis",    spec:false, desc:"Hip pain, pelvic alignment and post-natal core recovery.", plan:"Personalised Recovery Plan", area:"Hip / Pelvis"},
+  "arm-l":       {label:"Arm & Elbow",     spec:false, desc:"Tennis elbow, wrist pain, nerve tingling and weakness.", plan:"Personalised Recovery Plan", area:"Arm / Elbow"},
+  "arm-r":       {label:"Arm & Elbow",     spec:false, desc:"Tennis elbow, wrist pain, nerve tingling and weakness.", plan:"Personalised Recovery Plan", area:"Arm / Elbow"},
+  "leg-l":       {label:"Leg & Thigh",     spec:false, desc:"Muscle strain, cramps and lower-limb weakness.", plan:"Personalised Recovery Plan", area:"Other / Not sure"},
+  "leg-r":       {label:"Leg & Thigh",     spec:false, desc:"Muscle strain, cramps and lower-limb weakness.", plan:"Personalised Recovery Plan", area:"Other / Not sure"},
+  "shin-l":      {label:"Shin & Ankle",    spec:false, desc:"Shin pain, ankle sprains and balance issues.", plan:"Personalised Recovery Plan", area:"Other / Not sure"},
+  "shin-r":      {label:"Shin & Ankle",    spec:false, desc:"Shin pain, ankle sprains and balance issues.", plan:"Personalised Recovery Plan", area:"Other / Not sure"},
+  "head":        {label:"Head & Jaw",      spec:false, desc:"Tension headaches, TMJ/jaw pain and posture-related strain.", plan:"Personalised Recovery Plan", area:"Headache / Jaw"}
+};
+
+/* ---- contact display ---- */
+phoneDisplay.textContent = CONFIG.phonePretty;
+emailDisplay.textContent = CONFIG.email;
+year.textContent = new Date().getFullYear();
+
+/* ---- announcement close ---- */
+topClose.onclick = () => topbar.style.display = 'none';
+
+/* ---- nav / mobile menu ---- */
+const burger = document.getElementById('hamburger');
+const mm = document.getElementById('mobileMenu');
+function toggleMenu(o){burger.classList.toggle('open',o);mm.classList.toggle('open',o);document.body.style.overflow=o?'hidden':'';}
+burger.onclick = () => toggleMenu(!mm.classList.contains('open'));
+mm.querySelectorAll('a').forEach(a => a.onclick = () => toggleMenu(false));
+
+/* ---- typewriter ---- */
+(function(){
+  const el = document.getElementById('typeline');
+  const lines = ["Welcome to PhysioRetreat ✨","Hi, I'm Manasi 👋","Where does it hurt today?","Let's get you moving again."];
+  let li=0,ci=0,del=false;
+  function tick(){
+    const t=lines[li];
+    el.textContent = t.slice(0,ci);
+    if(!del && ci<t.length){ci++;setTimeout(tick,55);}
+    else if(!del){del=true;setTimeout(tick,1500);}
+    else if(ci>0){ci--;setTimeout(tick,28);}
+    else{del=false;li=(li+1)%lines.length;setTimeout(tick,300);}
+  }
+  setTimeout(tick,900);
+})();
+
+/* ---- reveal ---- */
+const io = new IntersectionObserver((es)=>{es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);}})},{threshold:.12});
+document.querySelectorAll('.reveal').forEach((el,i)=>{el.style.transitionDelay=(i%4*0.05)+'s';io.observe(el);});
+
+/* ---- counters ---- */
+const counters = document.querySelectorAll('[data-count]');
+const cio = new IntersectionObserver((es)=>{es.forEach(e=>{
+  if(!e.isIntersecting) return; cio.unobserve(e.target);
+  const el=e.target, target=parseFloat(el.dataset.count), dec=+(el.dataset.dec||0), suf=el.dataset.suffix||'';
+  let s=0; const dur=1100, t0=performance.now();
+  function step(now){const p=Math.min((now-t0)/dur,1);const v=(target*(1-Math.pow(1-p,3)));el.textContent=v.toFixed(dec)+suf;if(p<1)requestAnimationFrame(step);else el.textContent=target.toFixed(dec)+suf;}
+  requestAnimationFrame(step);
+})},{threshold:.5});
+counters.forEach(c=>cio.observe(c));
+
+/* ---- BODY MAP interaction ---- */
+let selectedArea = "", selectedPackage = "";
+const bmTag=bmTitle=null;
+function selectZone(key, el){
+  const z = ZONES[key]; if(!z) return;
+  document.querySelectorAll('.zone.active').forEach(n=>n.classList.remove('active'));
+  el.classList.add('active');
+  document.getElementById('bmTag').textContent = z.spec ? "✦ My speciality" : "Common concern";
+  document.getElementById('bmTitle').textContent = z.label;
+  document.getElementById('bmDesc').textContent = z.desc;
+  document.getElementById('bmPlan').textContent = z.plan;
+  selectedArea = z.area;
+  // pre-fill form area + reflect chip
+  document.getElementById('condition').value = z.area;
+  renderChips();
+}
+document.querySelectorAll('.zone').forEach(z=>{
+  z.addEventListener('click',()=>selectZone(z.dataset.zone,z));
+});
+document.getElementById('bmBook').addEventListener('click',()=>{
+  if(!selectedPackage) setPackage('Free Tele-Consult');
+  document.getElementById('book').scrollIntoView({behavior:'smooth'});
+});
+
+/* ---- package choose ---- */
+function setPackage(name){
+  selectedPackage = name;
+  // map package to a sensible consult type default
+  if(name==='Free Tele-Consult') document.getElementById('mode').value='Free Tele-Consult';
+  renderChips();
+}
+document.querySelectorAll('[data-pkg]').forEach(b=>{
+  b.addEventListener('click',()=>{
+    setPackage(b.dataset.pkg);
+    document.getElementById('book').scrollIntoView({behavior:'smooth'});
+  });
+});
+
+/* ---- selection chips in form ---- */
+function renderChips(){
+  const c = document.getElementById('selChips'); c.innerHTML='';
+  const add=(label,clear)=>{
+    const s=document.createElement('span');s.className='sel-chip';
+    s.innerHTML=label+' <button aria-label="remove">✕</button>';
+    s.querySelector('button').onclick=clear;c.appendChild(s);
+  };
+  if(selectedArea) add('📍 Area: <b>&nbsp;'+selectedArea+'</b>',()=>{selectedArea='';document.getElementById('condition').value='';renderChips();});
+  if(selectedPackage) add('🎁 Plan: <b>&nbsp;'+selectedPackage+'</b>',()=>{selectedPackage='';renderChips();});
+}
+
+/* ---- booking submit (WhatsApp / Email) ---- */
+const F = document.getElementById('bookingForm');
+function collect(){
+  const name=document.getElementById('name'), phone=document.getElementById('phone');
+  if(!name.value.trim()){name.focus();name.style.borderColor='#ff7a59';alert('Please add your name so Dr. Manasi can reach you.');return null;}
+  if(!phone.value.trim()){phone.focus();phone.style.borderColor='#ff7a59';alert('Please add your phone number so Dr. Manasi can confirm your slot.');return null;}
+  return {
+    name:name.value.trim(),
+    phone:phone.value.trim(),
+    mode:document.getElementById('mode').value,
+    location:document.getElementById('location').value,
+    area:selectedArea||document.getElementById('condition').value||'Not specified',
+    pkg:selectedPackage||'—',
+    date:document.getElementById('date').value||'Flexible',
+    time:document.getElementById('time').value||'Any time',
+    message:document.getElementById('message').value.trim()||'—'
+  };
+}
+function buildText(d){
+return `New Appointment Request — PhysioRetreat by Dr. Manasi Darekar
+
+Name: ${d.name}
+Phone/WhatsApp: ${d.phone}
+Consultation: ${d.mode}
+Location: ${d.location}
+Painful area: ${d.area}
+Package: ${d.pkg}
+Preferred date: ${d.date}
+Preferred time: ${d.time}
+Notes: ${d.message}`;
+}
+/* store every enquiry (Web3Forms) — silent background save, never blocks the booking */
+function logEnquiry(d, via){
+  if(!CONFIG.web3formsKey) return false;
+  try{
+    fetch('https://api.web3forms.com/submit',{
+      method:'POST', keepalive:true,
+      headers:{'Content-Type':'application/json', Accept:'application/json'},
+      body:JSON.stringify({
+        access_key:CONFIG.web3formsKey,
+        subject:'New Enquiry ('+via+') — '+d.name,
+        from_name:'PhysioRetreat Website',
+        Name:d.name, Phone:d.phone, Consultation:d.mode, Location:d.location,
+        Painful_area:d.area, Package:d.pkg, Preferred_date:d.date,
+        Preferred_time:d.time, Notes:d.message, Sent_via:via
+      })
+    }).catch(()=>{});
+  }catch(e){}
+  return true;
+}
+let toastTimer;
+function showToast(msg){
+  const t=document.getElementById('toast'); t.textContent=msg; t.classList.add('show');
+  clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),2800);
+}
+document.getElementById('btnWhatsApp').onclick=()=>{const d=collect();if(!d)return;
+  const saved=logEnquiry(d,'WhatsApp');
+  showToast(saved ? '✓ Enquiry saved — opening WhatsApp…' : 'Opening WhatsApp…');
+  window.open('https://wa.me/'+CONFIG.whatsapp+'?text='+encodeURIComponent(buildText(d)),'_blank');};
+document.getElementById('btnEmail').onclick=()=>{const d=collect();if(!d)return;
+  const saved=logEnquiry(d,'Email');
+  showToast(saved ? '✓ Enquiry saved — opening email…' : 'Opening your email app…');
+  const subj='Appointment Request — '+d.name+' ('+d.mode+')';
+  window.location.href='mailto:'+CONFIG.email+'?subject='+encodeURIComponent(subj)+'&body='+encodeURIComponent(buildText(d));};
+
+renderChips();
+</script>
+</body>
+</html>
